@@ -2,10 +2,16 @@
    :caption: Getting Started
    :maxdepth: 1
 
-   README.md
+  AUTO_RIA_API/
 
 .. toctree::
-   :caption: For Admin Users
+   :caption: TEST 1
    :maxdepth: 2
 
-   AUTO_RIA_API
+   DOM_RIA_API
+   
+.. toctree::
+   :caption: Test 2
+   :maxdepth: 2
+
+   RIA_com_API
