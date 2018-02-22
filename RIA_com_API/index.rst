@@ -12,7 +12,7 @@ RIA.com
 .. toctree::
    :maxdepth: 1
 
-  Перечень-статусов-заказов
-  Перечень-заказов
-  Изменение-статуса-заказа
+  list-status-orders
+  list-orders
+  change-order status
 
