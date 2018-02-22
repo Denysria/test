@@ -11,7 +11,7 @@
    DOM_RIA_API/
    
 .. toctree::
-   :caption: Test 2
-   :maxdepth: 2
+   :caption: RIA.com
+   :maxdepth: 1
 
    RIA_com_API/index
