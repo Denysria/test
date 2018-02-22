@@ -14,5 +14,5 @@ RIA.com
 
   list-status-orders
   list-orders
-  change-order status
+  change-order-status
 
