@@ -10,7 +10,7 @@ RIA.com
 
 
 .. toctree::
-   :maxdepth: 
+   :maxdepth: 1
 
   list-status-orders
   list-orders
