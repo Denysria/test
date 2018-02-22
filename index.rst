@@ -14,4 +14,4 @@
    :caption: Test 2
    :maxdepth: 2
 
-   RIA_com_API/
+   RIA_com_API/index
