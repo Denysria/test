@@ -9,4 +9,4 @@ DOM.RIA
    house-characteristics
    information
    search
-   state_cities_region
+   state_cities_region/index
