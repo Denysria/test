@@ -1,7 +1,8 @@
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
+   options/index
    house-characteristics
    information
    search
