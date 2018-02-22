@@ -1,18 +1,18 @@
 .. toctree::
-   :caption: Getting Started
+   :caption: Документация
    :maxdepth: 1
 
   AUTO_RIA_API/
 
 .. toctree::
-   :caption: DOM.RIA
+   :caption: Документация
    :maxdepth: 2
 
    DOM_RIA_API/index
    
    
 .. toctree::
-   :caption: RIA.com
+   :caption: Документация
    :maxdepth: 1
 
    RIA_com_API/index
