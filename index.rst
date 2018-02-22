@@ -8,7 +8,6 @@
    :caption: DOM.RIA
    :maxdepth: 2
 
-   DOM_RIA_API/options/index
    DOM_RIA_API/index
    
    
