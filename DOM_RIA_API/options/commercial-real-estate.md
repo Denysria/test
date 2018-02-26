@@ -1,7 +1,7 @@
 ### Продажа/аренда коммерческой недвижимости
 
-            <table class="table table-striped table-bordered">
-                <thead>
+<table>
+<thead>
                 <tr>
                     <th style="text-align:left">Название</th>
                     <th style="text-align:left">Параметр в строке запроса</th>
