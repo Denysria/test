@@ -1,4 +1,5 @@
-<h3><a id="___240"></a><strong>Продажа/аренда коммерческой недвижимости</strong></h3>
+### Продажа/аренда коммерческой недвижимости
+
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
