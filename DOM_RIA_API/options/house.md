@@ -1,105 +1,499 @@
-### Продажа домов
-
-|  Название           | Параметр в строке запроса | Тип данных   |
-|:--------------------|:--------------------------|:------------:|
-|Тип объекта | category|     `Number`   |
-|Тип недвижимости |realty_type |    `Number`       |
-|Тип операции | operation_type|    `Number`       |
-|Область | state_id| `Number`|
-|Город | city_id|`Number[]` |
-|Район | district_id| `Number[]`|
-|Тип стен | characteristic[149]|`Number` |
-|Количество комнат |characteristic[209][from] - characteristic[209][to] | `Number[]`|
-|Общая площадь |characteristic[215][from] - characteristic[215][to] |`Number[]` |
-|Жилая площадь |characteristic[216][from] - characteristic[216][to] |`Number[]` |
-|Кухня |characteristic[218][from] - characteristic[218][to] | `Number[]`|
-|Участок |characteristic[219][from] - characteristic[219][to] | `Number[]`|
-|Единица измерения площади участка |characteristic[226] | `Number[]`|
-|C беседкой   |characteristic[1492] |`Number` |
-|С верандой   |characteristic[1491] |`Number` |
-|С подвалом  |characteristic[1490] | `Number`|
-|С балконом |characteristic[1489] |`Number` |
-|С камином |characteristic[1488] |`Number` |
-|С садом  |characteristic[1487] | `Number`|
-|С баней/сауной |characteristic[1486] |`Number` |
-|С террасой |characteristic[1485] |`Number` |
-|С гаражом  |characteristic[1484] | `Number`|
-|С участком  |characteristic[1505] |`Number` |
-|С мансардою   |characteristic[1482] |`Number` |
-|С мебелью |characteristic[1480] | `Number`|
-|С ремонтом |characteristic[1479] |`Number` |
-|С отоплением   |characteristic[1478] | `Number`|
-|Мансардный этаж |characteristic[230] | `Number`|
-|Подвальный / цокольный этаж |characteristic[231] | `Number`|
-|У озера **Дача** |characteristic[1494] |`Number` |
-|У реки **Дача** |characteristic[1493] | `Number`|
-|Жилых этажей |characteristic[229][from] - characteristic[229][to] | `Number[]`|
-|Год постройки |characteristic[443] | `Number`|
-|Цена |characteristic[234][from] -characteristic[234][to] |`Number[]` |
-|Цена договорная |characteristic[1011]|`Number` |
-|Стартовая цена |characteristic[1464] |`Number` |
-|Тип валюты |characteristic[242] | `Number`|
-|Возможен обмен |characteristic[265] | `Number`|
-|Возможен торг | characteristic[273]| `Number`|
-|Тип предложения |characteristic[1437] | `Number`|
-|Возможна расстрочка/кредит |characteristic[274] |`Number` |
-|Только с картой |with_map |`Number` |
-|Только с видео | with_video | `Number`|
-|Только с фото |with_photo |`Number` |
-|Только с фото (более 3 фото)| photos_count_from|`Number` |
-|Только ТОП| urgent_only| `Number`|
-|Залоговое имущество | banks_only|`Number` |
-|Вторичное жилье |secondary | `Number`|
-|Первичное жилье | newbuildings| `Number`|
-|Не показывать мои объявления | exclude_my|`Number` |
-|Не показывать объявления от агентств|exclude_agencies |`Number` |
-|Дата подачи |date_from - date_to |`Number` |
-|Страница|page |`Number` |
-
-
-### Аренда домов
-
-|  Название           | Параметр в строке запроса | Тип данных   |
-|:--------------------|:--------------------------|:------------:|
-|Тип объекта | category|      `Number`  |
-|Тип недвижимости |realty_type |    `Number`       |
-|Тип операции | operation_type|  `Number`         |
-|Область | state_id| `Number`|
-|Город | city_id| `Number[]`|
-|Район | district_id|`Number[]` |
-|Тип стен | characteristic[149]| `Number`|
-|Количество комнат |characteristic[209][from] - characteristic[209][to] |`Number[]` |
-|Общая площадь |characteristic[215][from] - characteristic[215][to] |`Number[]` |
-|Жилая площадь |characteristic[216][from] - characteristic[216][to] |`Number[]` |
-|С балконом |characteristic[1489] |`Number` |
-|С камином |characteristic[1488] | `Number`|
-|С бассейном  |characteristic[1483] | `Number`|
-|С баней/сауной |characteristic[1486] |`Number` |
-|С гаражом  |characteristic[1484] |`Number` |
-|С мебелью |characteristic[1480] | `Number`|
-|С ремонтом |characteristic[1479] | `Number`|
-|Мансардный этаж |characteristic[230] | `Number`|
-|Подвальный / цокольный этаж |characteristic[231] | `Number`|
-|Цена/месяц |characteristic[235][from] - characteristic[235][to] |`Number[]` |
-|Цена договорная |characteristic[1011] |`Number` |
-|Дополнительные платежи |characteristic[254] | `Number`|
-|Детализация **(Аренда посуточно)** |characteristic[1399] |`Number` |
-|Спальных мест от **(Аренда посуточно)** |characteristic[212][from] - characteristic[212][to] |`Number[]` |
-|На день рождения **(Аренда посуточно)** |characteristic[1595] | `Number`|
-|Цена/сутки  **(Аренда посуточно)** |characteristic[237][from] - characteristic[237][to] |`Number[]` |
-|Цена/час  **(Аренда посуточно)** |characteristic[238][from] - characteristic[238][to] |`Number[]` |
-|Цена/неделю |characteristic[279][from] - characteristic[279][to] |`Number[]` |
-|Тип валюты |characteristic[246] | `Number`|
-|Тип предложения |characteristic[1437] | `Number`|
-|Только с картой |with_map |`Number` |
-|Только с видео | with_video | `Number`|
-|Только с фото |with_photo | `Number`|
-|Только с фото (более 3 фото)| photos_count_from|`Number` |
-|Только ТОП| urgent_only| `Number`|
-|Залоговое имущество | banks_only|`Number` |
-|Вторичное жилье |secondary | `Number`|
-|Первичное жилье | newbuildings| `Number`|
-|Не показывать мои объявления | exclude_my| `Number`|
-|Не показывать объявления от агентств|exclude_agencies |`Number` |
-|Дата подачи |date_from - date_to |`Number` |
-|Страница|page |`Number` |
+ <h3><a id="__52"></a><strong>Продажа домов</strong></h3>
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th style="text-align:left">Название</th>
+                    <th style="text-align:left">Параметр в строке запроса</th>
+                    <th style="text-align:center">Тип данных</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="text-align:left">Тип объекта</td>
+                    <td style="text-align:left">category</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип недвижимости</td>
+                    <td style="text-align:left">realty_type</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип операции</td>
+                    <td style="text-align:left">operation_type</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Область</td>
+                    <td style="text-align:left">state_id</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Город</td>
+                    <td style="text-align:left">city_id</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Район</td>
+                    <td style="text-align:left">district_id</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип стен</td>
+                    <td style="text-align:left">characteristic[149]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Количество комнат</td>
+                    <td style="text-align:left">characteristic[209][from] - characteristic[209][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Общая площадь</td>
+                    <td style="text-align:left">characteristic[215][from] - characteristic[215][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Жилая площадь</td>
+                    <td style="text-align:left">characteristic[216][from] - characteristic[216][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Кухня</td>
+                    <td style="text-align:left">characteristic[218][from] - characteristic[218][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Участок</td>
+                    <td style="text-align:left">characteristic[219][from] - characteristic[219][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Единица измерения площади участка</td>
+                    <td style="text-align:left">characteristic[226]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">C беседкой</td>
+                    <td style="text-align:left">characteristic[1492]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С верандой</td>
+                    <td style="text-align:left">characteristic[1491]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С подвалом</td>
+                    <td style="text-align:left">characteristic[1490]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С балконом</td>
+                    <td style="text-align:left">characteristic[1489]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С камином</td>
+                    <td style="text-align:left">characteristic[1488]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С садом</td>
+                    <td style="text-align:left">characteristic[1487]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С баней/сауной</td>
+                    <td style="text-align:left">characteristic[1486]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С террасой</td>
+                    <td style="text-align:left">characteristic[1485]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С гаражом</td>
+                    <td style="text-align:left">characteristic[1484]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С участком</td>
+                    <td style="text-align:left">characteristic[1505]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С мансардою</td>
+                    <td style="text-align:left">characteristic[1482]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С мебелью</td>
+                    <td style="text-align:left">characteristic[1480]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С ремонтом</td>
+                    <td style="text-align:left">characteristic[1479]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С отоплением</td>
+                    <td style="text-align:left">characteristic[1478]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Мансардный этаж</td>
+                    <td style="text-align:left">characteristic[230]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Подвальный / цокольный этаж</td>
+                    <td style="text-align:left">characteristic[231]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">У озера <strong>Дача</strong></td>
+                    <td style="text-align:left">characteristic[1494]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">У реки <strong>Дача</strong></td>
+                    <td style="text-align:left">characteristic[1493]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Жилых этажей</td>
+                    <td style="text-align:left">characteristic[229][from] - characteristic[229][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Год постройки</td>
+                    <td style="text-align:left">characteristic[443]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Цена</td>
+                    <td style="text-align:left">characteristic[234][from] -characteristic[234][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Цена договорная</td>
+                    <td style="text-align:left">characteristic[1011]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Стартовая цена</td>
+                    <td style="text-align:left">characteristic[1464]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип валюты</td>
+                    <td style="text-align:left">characteristic[242]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Возможен обмен</td>
+                    <td style="text-align:left">characteristic[265]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Возможен торг</td>
+                    <td style="text-align:left">characteristic[273]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип предложения</td>
+                    <td style="text-align:left">characteristic[1437]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Возможна расстрочка/кредит</td>
+                    <td style="text-align:left">characteristic[274]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только с картой</td>
+                    <td style="text-align:left">with_map</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только с видео</td>
+                    <td style="text-align:left">with_video</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только с фото</td>
+                    <td style="text-align:left">with_photo</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только с фото (более 3 фото)</td>
+                    <td style="text-align:left">photos_count_from</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только ТОП</td>
+                    <td style="text-align:left">urgent_only</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Залоговое имущество</td>
+                    <td style="text-align:left">banks_only</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Вторичное жилье</td>
+                    <td style="text-align:left">secondary</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Первичное жилье</td>
+                    <td style="text-align:left">newbuildings</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Не показывать мои объявления</td>
+                    <td style="text-align:left">exclude_my</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Не показывать объявления от агентств</td>
+                    <td style="text-align:left">exclude_agencies</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Дата подачи</td>
+                    <td style="text-align:left">date_from - date_to</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Страница</td>
+                    <td style="text-align:left">page</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                </tbody>
+            </table>
+            <h3><a id="__111"></a><strong>Аренда домов</strong></h3>
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th style="text-align:left">Название</th>
+                    <th style="text-align:left">Параметр в строке запроса</th>
+                    <th style="text-align:center">Тип данных</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="text-align:left">Тип объекта</td>
+                    <td style="text-align:left">category</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип недвижимости</td>
+                    <td style="text-align:left">realty_type</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип операции</td>
+                    <td style="text-align:left">operation_type</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Область</td>
+                    <td style="text-align:left">state_id</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Город</td>
+                    <td style="text-align:left">city_id</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Район</td>
+                    <td style="text-align:left">district_id</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип стен</td>
+                    <td style="text-align:left">characteristic[149]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Количество комнат</td>
+                    <td style="text-align:left">characteristic[209][from] - characteristic[209][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Общая площадь</td>
+                    <td style="text-align:left">characteristic[215][from] - characteristic[215][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Жилая площадь</td>
+                    <td style="text-align:left">characteristic[216][from] - characteristic[216][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С балконом</td>
+                    <td style="text-align:left">characteristic[1489]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С камином</td>
+                    <td style="text-align:left">characteristic[1488]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С бассейном</td>
+                    <td style="text-align:left">characteristic[1483]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С баней/сауной</td>
+                    <td style="text-align:left">characteristic[1486]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С гаражом</td>
+                    <td style="text-align:left">characteristic[1484]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С мебелью</td>
+                    <td style="text-align:left">characteristic[1480]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">С ремонтом</td>
+                    <td style="text-align:left">characteristic[1479]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Мансардный этаж</td>
+                    <td style="text-align:left">characteristic[230]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Подвальный / цокольный этаж</td>
+                    <td style="text-align:left">characteristic[231]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Цена/месяц</td>
+                    <td style="text-align:left">characteristic[235][from] - characteristic[235][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Цена договорная</td>
+                    <td style="text-align:left">characteristic[1011]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Дополнительные платежи</td>
+                    <td style="text-align:left">characteristic[254]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Детализация <strong>(Аренда посуточно)</strong></td>
+                    <td style="text-align:left">characteristic[1399]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Спальных мест от <strong>(Аренда посуточно)</strong></td>
+                    <td style="text-align:left">characteristic[212][from] - characteristic[212][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">На день рождения <strong>(Аренда посуточно)</strong></td>
+                    <td style="text-align:left">characteristic[1595]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Цена/сутки  <strong>(Аренда посуточно)</strong></td>
+                    <td style="text-align:left">characteristic[237][from] - characteristic[237][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Цена/час  <strong>(Аренда посуточно)</strong></td>
+                    <td style="text-align:left">characteristic[238][from] - characteristic[238][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Цена/неделю</td>
+                    <td style="text-align:left">characteristic[279][from] - characteristic[279][to]</td>
+                    <td style="text-align:center"><code>Number[]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип валюты</td>
+                    <td style="text-align:left">characteristic[246]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Тип предложения</td>
+                    <td style="text-align:left">characteristic[1437]</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только с картой</td>
+                    <td style="text-align:left">with_map</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только с видео</td>
+                    <td style="text-align:left">with_video</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только с фото</td>
+                    <td style="text-align:left">with_photo</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только с фото (более 3 фото)</td>
+                    <td style="text-align:left">photos_count_from</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Только ТОП</td>
+                    <td style="text-align:left">urgent_only</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Залоговое имущество</td>
+                    <td style="text-align:left">banks_only</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Вторичное жилье</td>
+                    <td style="text-align:left">secondary</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Первичное жилье</td>
+                    <td style="text-align:left">newbuildings</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Не показывать мои объявления</td>
+                    <td style="text-align:left">exclude_my</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Не показывать объявления от агентств</td>
+                    <td style="text-align:left">exclude_agencies</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Дата подачи</td>
+                    <td style="text-align:left">date_from - date_to</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Страница</td>
+                    <td style="text-align:left">page</td>
+                    <td style="text-align:center"><code>Number</code></td>
+                </tr>
+                </tbody>
+            </table>
