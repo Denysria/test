@@ -11,6 +11,7 @@
 
 или
  `curl -X GET "https://developers.ria.com/dom/options?
+
 category=id&realty_type=id&operation_type=id&api_key=YOUR_API_KEY" -H "accept: application/json"`
 
 Для получение информации на украинском языке нужно добавить параметр *lang_id=4*
