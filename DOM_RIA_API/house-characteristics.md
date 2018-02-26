@@ -26,7 +26,8 @@
 
 https://developers.ria.com/dom/options?category=4&realty_type=7&operation_type=1&api_key=YOUR_API_KEY
 
-или `curl -X GET "https://developers.ria.com/dom/options?category=4&realty_type=7&operation_type=1&api_key=YOUR_API_KEY" -H "accept: application/json"`
+или `curl -X GET "https://developers.ria.com/dom/options?category=4&realty_type=7&operation_type=1&`
+`api_key=YOUR_API_KEY" -H "accept: application/json"`
 
 Результат будет следующим:
 ```json
