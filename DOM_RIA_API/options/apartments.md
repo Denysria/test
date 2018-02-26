@@ -1,4 +1,4 @@
-<div ng-bind-html="trustedHtml" class="ng-binding"><h5 id="продажа-квартиркомнат">Продажа квартир/комнат</h5>
+<div ng-bind-html="trustedHtml" class="ng-binding"><h3 id="продажа-квартиркомнат">Продажа квартир/комнат</h3>
 <table>
 <thead>
 <tr>
@@ -215,7 +215,9 @@
 </tr>
 </tbody>
 </table>
-<h5 id="аренда-квартиркомнат">Аренда квартир/комнат</h5>
+  
+  
+<h3 id="аренда-квартиркомнат">Аренда квартир/комнат</h3>
 <table>
 <thead>
 <tr>
