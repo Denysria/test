@@ -1,6 +1,6 @@
- <h3><a id="__159"></a><strong>Продажа офисов</strong></h3>
-            <table class="table table-striped table-bordered">
-                <thead>
+### Продажа офисов
+<table>
+<thead>
                 <tr>
                     <th style="text-align:left">Название</th>
                     <th style="text-align:left">Параметр в строке запроса</th>
@@ -200,9 +200,10 @@
                 </tr>
                 </tbody>
             </table>
-            <h3><a id="__203"></a><strong>Аренда офисов</strong></h3>
-            <table class="table table-striped table-bordered">
-                <thead>
+### Аренда офисов
+
+<table>
+<thead>
                 <tr>
                     <th style="text-align:left">Название</th>
                     <th style="text-align:left">Параметр в строке запроса</th>
