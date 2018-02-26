@@ -1,6 +1,6 @@
-<h3><a id="11"></a><strong>Продажа/аренда гаражей</strong></h3>
-            <table class="table table-striped table-bordered">
-                <thead>
+### Продажа/аренда гаражей
+<table>
+<thead>
                 <tr>
                     <th style="text-align:left">Название</th>
                     <th style="text-align:left">Параметр в строке запроса</th>
