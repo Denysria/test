@@ -16,3 +16,9 @@
    :maxdepth: 1
 
    RIA_com_API/index
+
+.. toctree::
+   :caption: Документация
+   :maxdepth: 1
+
+   general-documentation/
