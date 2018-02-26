@@ -18,7 +18,7 @@
    RIA_com_API/index
 
 .. toctree::
-   :caption: Документация
+   :caption: Общая документация
    :maxdepth: 1
 
-   general-documentation/
+   general-documentation/limits
