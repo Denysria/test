@@ -1,6 +1,6 @@
- <h3><a id="__52"></a><strong>Продажа домов</strong></h3>
-            <table class="table table-striped table-bordered">
-                <thead>
+### Продажа домов
+<table>
+<thead>
                 <tr>
                     <th style="text-align:left">Название</th>
                     <th style="text-align:left">Параметр в строке запроса</th>
@@ -275,9 +275,13 @@
                 </tr>
                 </tbody>
             </table>
-            <h3><a id="__111"></a><strong>Аренда домов</strong></h3>
-            <table class="table table-striped table-bordered">
-                <thead>
+            
+            
+### Аренда домов
+
+
+<table>
+<thead>
                 <tr>
                     <th style="text-align:left">Название</th>
                     <th style="text-align:left">Параметр в строке запроса</th>
