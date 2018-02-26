@@ -1,6 +1,8 @@
- <h3><a id="___286"></a><strong>Продажа/аренда земельных участков</strong></h3>
-            <table class="table table-striped table-bordered">
-                <thead>
+### Продажа/аренда земельных участков
+
+
+<table>
+<thead>
                 <tr>
                     <th style="text-align:left">Название</th>
                     <th style="text-align:left">Параметр в строке запроса</th>
