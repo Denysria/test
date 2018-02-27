@@ -1,6 +1,6 @@
 .. toctree::
    :caption: Документация
-   :maxdepth: 1
+   :maxdepth: 2
 
   AUTO_RIA_API/index
 
