@@ -2,9 +2,6 @@
 ========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
-   options/index
-   search
-   average-price
-   info
+  
