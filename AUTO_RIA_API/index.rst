@@ -1,3 +1,5 @@
+AUTO.RIA
+========
 
 .. toctree::
    :maxdepth: 1
