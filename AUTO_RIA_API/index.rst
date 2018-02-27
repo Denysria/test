@@ -2,7 +2,7 @@ AUTO.RIA
 ========
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
   used_cars/index
   new_cars/index
