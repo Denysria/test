@@ -2,7 +2,7 @@
    :caption: Документация
    :maxdepth: 1
 
-  AUTO_RIA_API/
+  AUTO_RIA_API/index
 
 .. toctree::
    :caption: Документация
