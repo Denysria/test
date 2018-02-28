@@ -3,6 +3,7 @@
    :maxdepth: 2
 
   AUTO_RIA_API/index
+  AUTO_RIA_API/used_cars/api
 
 .. toctree::
    :caption: Документация
