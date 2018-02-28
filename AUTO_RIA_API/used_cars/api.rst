@@ -4,7 +4,7 @@ REST API
 .. raw:: html
 
    <div class="swagger-section">
-     <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+   <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
    </div>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/2.1.3/css/screen.min.css" />
@@ -22,7 +22,7 @@ REST API
 
    <script type="text/javascript">
      window.swaggerUi = new SwaggerUi({
-       url: 'test/_static/info-swagger.yml',
+       url: '../_static/info-swagger.yml',
        dom_id: 'swagger-ui-container'
      });
 
