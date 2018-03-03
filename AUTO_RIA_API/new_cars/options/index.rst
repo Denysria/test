@@ -12,6 +12,3 @@
    auto-packages
    list-of-ads
    modifications
-   new-ad
-   editing-an-ad
-   remove-ad
