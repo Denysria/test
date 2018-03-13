@@ -4,7 +4,8 @@
 
 https://developers.ria.com/dom/search?api_key=YOUR_API_KEY&PARAMETERS
 
-или `curl -X GET "https://developers.ria.com/dom/search?api_key=YOUR_API_KEY&PARAMETERS"  -H "accept: application/json"`
+или `curl -X GET "https://developers.ria.com/dom/search?api_key=YOUR_API_KEY&PARAMETERS"`
+`  -H "accept: application/json"`
 
 Он состоит из:
 
