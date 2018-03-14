@@ -23,3 +23,5 @@
    :maxdepth: 1
 
    general-documentation/limits
+   general-documentation/api_key
+   general-documentation/rate_limits
