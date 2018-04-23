@@ -1,0 +1,193 @@
+swagger: '2.0'
+info:
+  description: 'AUTO.RIA'
+  version: 1.0.0
+  title: 'Список типов транспорта, кузова, марки и модели авто, города и другое'
+  contact:
+    email: denys.bedrii@ria.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+host: developers.ria.com
+basePath: /auto
+schemes:
+  - https
+paths:
+  /categories:
+    get:
+      tags:
+      - Тип транспорта
+      responses:
+        '200':
+          description: search results
+        '429':
+          description: OVER_RATE_LIMIT
+      summary: ''
+      description: 'С помощью этого запроса,можно получить список всех видов транспорта'
+  '/categories/{categories_id}/bodystyles':
+    get:
+      tags:
+      - Тип кузова
+      responses:
+        '200':
+          description: search results
+        '400':
+          description: bad input parameter
+        '429':
+          description: OVER_RATE_LIMIT
+      parameters:
+        - name: categories_id
+          in: path
+          required: true
+          type: string
+      summary: ''
+      description: 'С помощью этого запроса,можно получить весь список кузовов'
+  '/categories/{categories_id}/marks':
+    get:
+      tags:
+      - Марки автомобилей
+      responses:
+        '200':
+          description: search results
+        '400':
+          description: bad input parameter
+        '429':
+          description: OVER_RATE_LIMIT
+      parameters:
+        - name: categories_id
+          in: path
+          required: true
+          type: string
+      description: >-
+        Марки зависят от типов транспорта. Поэтому для того, чтобы получить
+        список марок необходимо отправить GET запрос по адресу
+        **categories/:categoryId/marks**, где **categoryId** - идентификатор
+        типа транспорта.
+      summary: ''
+  '/categories/{categories_id}/marks/{mark_id}/models/_group':
+    get:
+      tags:
+      - Модели
+      responses:
+        '200':
+          description: search results
+        '400':
+          description: bad input parameter
+        '429':
+          description: OVER_RATE_LIMIT
+      parameters:
+        - name: categories_id
+          in: path
+          required: true
+          type: string
+        - name: mark_id
+          in: path
+          required: true
+          type: string
+      summary: ''
+      description: 'При использовании этого запроса, Вы получает список всех моделей'
+  /type:
+    get:
+      tags:
+      - Тип топлива
+      responses:
+        '200':
+          description: search results
+        '429':
+          description: OVER_RATE_LIMIT
+      summary: ''
+      description: 'При использовании этого запроса, Вы получает список всех видов топлива'
+  /colors:
+    get:
+      tags:
+      - Цвета
+      responses:
+        '200':
+          description: search results
+        '429':
+          description: OVER_RATE_LIMIT
+      summary: ''
+      description: 'При использовании этого запроса, Вы получает список стран производителей'
+  /countries:
+    get:
+      tags:
+      - Страна производитель
+      responses:
+        '200':
+          description: search results
+        '429':
+          description: OVER_RATE_LIMIT
+      summary: ''
+      description: 'При использовании этого запроса, Вы получает список всех цветов'
+  '/categories/{categories_id}/gearboxes':
+    get:
+      tags:
+      - Коробки передач
+      responses:
+        '200':
+          description: search results
+        '400':
+          description: bad input parameter
+        '429':
+          description: OVER_RATE_LIMIT
+      parameters:
+        - name: categories_id
+          in: path
+          required: true
+          type: string
+      description: >-
+        Коробки передач зависят от типа транспорта, поэтому  чтобы получить их
+        список, необходимо послать GET запрос по адресу
+        **categories/:categoryId/gearboxes**, где **categoryId** - идентификатор
+        типа транспорта.
+      summary: ''
+  '/categories/{categories_id}/driverTypes':
+    get:
+      tags:
+      - Тип привода
+      responses:
+        '200':
+          description: search results
+        '400':
+          description: bad input parameter
+        '429':
+          description: OVER_RATE_LIMIT
+      parameters:
+        - name: categories_id
+          in: path
+          required: true
+          type: string
+      description: >-
+        Типы привода также зависят от типа транспорта, поэтому, чтобы получить
+        их список, необходимо послать GET запрос по адресу
+        **categoryId/driverTypes**, где **categoryId** - идентификатор типа
+        транспорта.
+      summary: ''
+  '/categories/{categories_id}/options':
+    get:
+      tags:
+      - Опции
+      responses:
+        '200':
+          description: search results
+        '400':
+          description: bad input parameter
+        '429':
+          description: OVER_RATE_LIMIT
+      parameters:
+        - name: categories_id
+          in: path
+          required: true
+          type: string
+      summary: ''
+      description: >-
+        Опции зависят от типа транспорта. Получить их список можно отправив GET
+        запрос по адресу **categories/:categoryId/options**, где **categoryId**
+        - идентификатор типа транспорта.
+security:
+  - api_key: []
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: api_key
+    in: query
