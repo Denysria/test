@@ -22,7 +22,7 @@ REST API
 
    <script type="text/javascript">
      window.swaggerUi = new SwaggerUi({
-       url: '/AUTO_RIA_API/used_cars/_static/admin-api-swagger.yml',
+       url: '../_static/admin-api-swagger.yml',
        dom_id: 'swagger-ui-container'
      });
 
