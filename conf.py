@@ -24,7 +24,7 @@ copyright = u'2018, SANR'
 author = u'SANR'
 
 # The short X.Y version
-version = u''
+version = u'stable'
 # The full version, including alpha/beta/rc tags
 release = u'0.0.1'
 
@@ -166,7 +166,7 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-github_doc_root = 'https://github.com/ImAvtandil/auto-ria-rest-api/'
+github_doc_root = 'https://github.com/Denysria/test/'
 
 def setup(app):
     app.add_config_value('recommonmark_config', {
