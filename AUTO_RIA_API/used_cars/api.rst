@@ -22,7 +22,7 @@ REST API
 
    <script type="text/javascript">
      window.swaggerUi = new SwaggerUi({
-       url: '../../AA_static/admin-api-swagger.yml',
+       url: '../../../../AA_static/admin-api-swagger.yml',
        dom_id: 'swagger-ui-container'
      });
 
