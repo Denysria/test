@@ -21,7 +21,7 @@
    :caption: REST API
    :maxdepth: 1
     
-   rest api/api
+   rest_api/api
     
     
    
