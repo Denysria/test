@@ -3,7 +3,7 @@
    :maxdepth: 2
 
   AUTO_RIA_API/index
-  AUTO_RIA_API/used_cars/api
+  
 
 .. toctree::
    :caption: Документация
@@ -21,7 +21,10 @@
    :caption: REST API
    :maxdepth: 1
     
-    rest api/api
+   rest api/api
+    
+    
+   
 .. toctree::
    :caption: Общая документация
    :maxdepth: 1
