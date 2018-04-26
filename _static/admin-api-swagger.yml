@@ -48,3 +48,19 @@ securityDefinitions:
     type: apiKey
     name: api_key
     in: query
+WebsiteBackend:
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+        readOnly: true
+      frontend_host:
+        type: string
+      backend_protocol:
+        type: string
+        enum: ["http", "https"]
+      server_host:
+        type: string
+      server_port:
+        type: integer
