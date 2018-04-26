@@ -17,7 +17,11 @@
    :maxdepth: 1
 
    RIA_com_API/index
-
+.. toctree::
+   :caption: REST API
+   :maxdepth: 1
+    
+    rest api/api
 .. toctree::
    :caption: Общая документация
    :maxdepth: 1
