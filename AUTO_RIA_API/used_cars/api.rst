@@ -6,25 +6,239 @@ REST API
    <div class="swagger-section">
      <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
    </div>
+   <script src="assets/files/swagger/swagger-ui-bundle.js"> </script>
+   <script src="assets/files/swagger/swagger-ui-standalone-preset.js"> </script>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/2.1.3/css/screen.min.css" />
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/jquery-1.8.0.min.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/jquery.slideto.min.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/jquery.wiggle.min.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/jquery.ba-bbq.min.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/handlebars-2.0.0.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/underscore-min.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/backbone-min.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/swagger-ui.min.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/highlight.7.3.pack.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/marked.js"></script>
-   <script src="https://cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/swagger-oauth.js"></script>
+   <script>
+     window.onload = function() {
 
-   <script type="text/javascript">
-     window.swaggerUi = new SwaggerUi({
-       url: '../../AA_static/admin-api-swagger.yml',
-       dom_id: 'swagger-ui-container'
-     });
+  // Build a system
+  const ui = SwaggerUIBundle({
+    url: "docs/rest_api_specifications/openapi_openweathermap.yml",
+    // url: "http://petstore.swagger.io/v2/swagger.json",
+    dom_id: '#swagger-ui',
+    defaultModelsExpandDepth: -1,
+    docExpansion: "full",
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout"
+  })
 
-     window.swaggerUi.load();
-   </script>
+  window.ui = ui
+}
+</script>
+<style>
+
+.swagger-ui .info .title small pre {
+	padding: 1px;
+	background-color: #444;
+}
+
+.swagger-ui .info .title small {
+    font-size: 10px;
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 4px;
+    vertical-align: super;
+    border-radius: 57px !important;
+    background: #89bf04 !important;
+}
+.swagger-ui .info .title small pre.version {
+    background-color: #89bf04;
+    border: 0px;
+  }
+.swagger-ui pre.version {
+      padding: 0px;
+      max-width: 60px;
+      border: 0px;
+  }
+.swagger-ui .info .title small pre {
+      padding:0px;
+  }
+
+.swagger-ui .info .title small {
+      background-color: rgb(137, 191, 4);
+  }
+  .swagger-ui table th, .swagger-ui table td {
+      padding: 10px !important;
+  }
+
+  .swagger-ui table th {
+    color: white;
+    font-size:16px;
+}
+
+.swagger-ui .col_header {
+    color: white !important;
+}
+
+div#swagger-ui {
+    border: 1px solid #dedede;
+}
+
+
+.swagger-ui .info .title small pre {
+	padding: 1px;
+	background-color: #444;
+}
+
+.swagger-ui .info .title small {
+    font-size: 10px;
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 4px;
+    vertical-align: super;
+    border-radius: 57px !important;
+    background: #89bf04 !important;
+}
+
+.swagger-ui .info .title small pre.version {
+    background-color: #89bf04;
+  }
+.swagger-ui li.tabitem {
+    list-style: none !important;
+}
+
+.swagger-ui .response-col_description__inner p {
+  color: white;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.swagger-ui pre.version {
+    padding: 0px;
+
+}
+
+.swagger-ui .info .title small pre {
+    padding:0px;
+}
+
+
+.swagger-ui .info .title small {
+    background-color: rgb(137, 191, 4);
+}
+
+.swagger-ui a.tablinks {
+    margin-right: 20px;
+}
+
+.swagger-ui td.col.response-col_status {
+    padding: 10px !important;
+}
+
+.swagger-ui .opblock .opblock-section-header h4 {
+  font-size: 18px !important;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.swagger-ui td.col, .swagger-ui td.col.col_header.response-col_description {
+    padding: 10px;
+}
+
+.swagger-ui h4.opblock-title_normal {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.swagger-ui h4.opblock-title_normal[id] {
+    padding-bottom: 15px;
+    font-style: italic;
+  }
+
+
+.swagger-ui {
+  border: 1px solid #dedede;
+}
+
+.swagger-ui select {
+    font-weight: normal !important;
+    font-family: monospace;
+}
+
+.swagger-ui table {
+  table-layout: auto !important;
+}
+
+.swagger-ui .scheme-container {
+  padding: 0px 0px 15px 0px;
+}
+
+.swagger-ui .renderedMarkdown p {
+    font-size: 14px;
+}
+
+.swagger-ui tr.response p {
+  font-style: italic;
+}
+
+.swagger-ui table.model tbody tr td {
+  padding: 1em !important;
+}
+
+.response-content-type.controls-accept-header small code {
+    font-size: 12px;
+  }
+
+.swagger-ui .opblock-summary-path a.nostyle {
+    font-family: monospace;
+}
+
+
+.swagger-ui .info {
+  /* margin: -25px 0px !important; */
+}
+
+.swagger-ui .main span.url {
+    display: none;
+}
+
+.swagger-ui span.opblock-summary-path a.nostyle {
+    font-family: Monospace !important;
+    size: 16px;
+}
+
+.swagger-ui .opblock-description-wrapper, .swagger-ui .opblock-external-docs-wrapper, .swagger-ui .opblock-title_normal {
+    padding: 15px 20px 5px 20px;
+}
+.swagger-ui h1[id], .swagger-ui h2[id], .swagger-ui h3[id], .swagger-ui h4[id], .swagger-ui h5[id] {
+    margin: 0px;
+    padding: 0px;
+}
+
+.swagger-ui pre {
+    font-family: Monaco, Monospace !important;
+    font-size: 11px;
+  }
+
+h6, h6 code.highlighter-rouge {
+    font-size: 16px;
+}
+
+.swagger-ui .responses-inner h4, .swagger-ui .responses-inner h5 {
+  font-size: 16px;
+}
+
+.swagger-ui code {
+    font-size: 12px;
+}
+
+
+/* disable the try it out buttons
+
+button.btn.try-out__btn {
+    display: none;
+}
+*/
+</style>
