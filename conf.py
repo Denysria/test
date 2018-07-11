@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'TestSanrDoc'
-copyright = u'2018, SANR'
-author = u'SANR'
+project = u'RIA.com Documantation'
+copyright = u' 2014-2018 RIA.com. Все права защищены'
+author = u''
 
 # The short X.Y version
 version = u'stable'
